@@ -49,7 +49,7 @@ __*Instagram Phishing Tool*__
 
 
 # :camera_flash:Desktop Screenshot   :camera_flash:
-<img src="insta1.png" alt="alt yazı" width="720">
+<img src="insta9.png" alt="alt yazı" width="720">
 
 *********
 # :camera_flash:Mobile Screenshot   :camera_flash:
