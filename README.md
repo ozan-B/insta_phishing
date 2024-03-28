@@ -1,4 +1,4 @@
-# insta_phishing:link:	
+# insta_phishing :link:	
 
 __*Instagram Phishing Tool*__
 
